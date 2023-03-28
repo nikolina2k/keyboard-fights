@@ -8,13 +8,10 @@
 </div>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+
     .container {
         display: flex;
         flex-direction: column;
     }
-    </style>
+    
+</style>
