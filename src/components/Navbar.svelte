@@ -50,11 +50,11 @@
 			border-radius: 25px;
         }
 
-    li:hover {
-        background: linear-gradient(to bottom, #e8edec, #d2d1d3);
-        box-shadow: 0px 3px 20px 0px black;
-		transform: scale(1.2);
-        color: black;
+    li:hover::before {
+            background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+            box-shadow: 0px 3px 20px 0px black;
+            transform: scale(1.2);
+            color: black;
     }
 
 </style>
