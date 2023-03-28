@@ -23,7 +23,7 @@
         backdrop-filter: blur(10px);
         align-items: center;
         padding: 0 10px;
-        margin: 50px 0 0 0;        
+        margin: 50px 0 0 0;   
     }
 
     li {
@@ -36,6 +36,10 @@
         position: relative;
 		cursor: pointer;
         white-space: nowrap;
+    }
+
+    a:link {
+        text-decoration: none;
     }
 
     li::before {
