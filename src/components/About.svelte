@@ -1,14 +1,16 @@
 <script lang="ts">
 </script>
 
-<main>
+<div class="about">
     <h1>About</h1>
     <p>A personalized typeracer where user can upload or choose their own reference for races.</p>
-</main>
+</div>
 
 <style>
-main {
-  display: table;
-  margin: auto;
-}
+
+  .about {
+    display: table;
+    margin: auto;
+  }
+
 </style>

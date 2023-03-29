@@ -1,16 +1,16 @@
 <script lang="ts">
 </script>
 
-<main>
-    <title>Keyboard Fights</title>
+<div class="home">
+    <h1>Keyboard Fights</h1>
     <p>beep boop</p>
-</main>
+</div>
 
 <style>
 
-main {
-  display: table;
-  margin: auto;
-}
+  .home {
+    display: table;
+    margin: auto;
+  }
 
 </style>

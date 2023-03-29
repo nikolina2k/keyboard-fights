@@ -14,6 +14,14 @@
 </header>
 
 <style>
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
     .navbar_links {
         border-radius: 25px;
         height: fit-content;
@@ -38,8 +46,16 @@
         white-space: nowrap;
     }
 
+    a:visited {
+        color: inherit;
+    }
+
     a:link {
         text-decoration: none;
+    }
+
+    li:hover {
+        color: black;
     }
 
     li::before {
