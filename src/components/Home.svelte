@@ -2,8 +2,9 @@
 </script>
 
 <div class="home">
-    <h1>Keyboard Fights</h1>
-    <p>beep boop</p>
+    <button type="button" class="join">Join a typing race</button>
+    <button type="button" class="practice">Practice typing</button>
+    <button type="button" class="create">Create your own</button>
 </div>
 
 <style>
@@ -12,5 +13,5 @@
     display: table;
     margin: auto;
   }
-
+  
 </style>
