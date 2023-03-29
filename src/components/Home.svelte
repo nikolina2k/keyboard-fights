@@ -5,7 +5,7 @@
   <div class="buttons">
     <button type="button" class="join">Join a typing race</button>
     <button type="button" class="practice">Practice typing</button>
-    <button type="button" class="create">Create your own</button>
+    <button type="button" class="create">Create a typing race</button>
   </div>
 </div>
 
