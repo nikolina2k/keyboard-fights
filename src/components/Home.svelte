@@ -53,4 +53,15 @@
     transform: scale(1.05);
   }
 
+  .create {
+    background-color: #c2eefb;
+    box-shadow: rgba(44, 177, 187, 0.2) 0 -25px 18px -14px inset,rgba(44, 170, 187, 0.15) 0 1px 2px,rgba(44, 170, 187, 0.15) 0 2px 4px,rgba(44, 165, 187, 0.15) 0 4px 8px,rgba(44, 182, 187, 0.15) 0 8px 16px,rgba(44, 177, 187, 0.15) 0 16px 32px;
+    color: rgb(0, 124, 128);
+  }
+
+  .create:hover {
+    box-shadow: rgba(44, 177, 187, 0.35) 0 -25px 18px -14px inset,rgba(44, 177, 187, 0.25) 0 1px 2px,rgba(44, 177, 187, 0.25) 0 2px 4px,rgba(44, 170, 187, 0.25) 0 4px 8px,rgba(44, 170, 187, 0.25) 0 8px 16px,rgba(44, 170, 187, 0.25) 0 16px 32px;
+    transform: scale(1.05);
+  }
+
 </style>
