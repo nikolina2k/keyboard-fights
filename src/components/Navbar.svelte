@@ -7,8 +7,8 @@
         <ul class="navbar_links">
           <li><a href="{base}/">Home</a></li>
           <li><a href="{base}/about/">About</a></li>
-          <li><a href="{base}/">Create Account</a></li>
-          <li><a href="{base}/">Sign In</a></li>
+          <li><a href="{base}/create_acc/">Create Account</a></li>
+          <li><a href="{base}/sign_in/">Sign In</a></li>
         </ul>
     </nav>
 </header>
