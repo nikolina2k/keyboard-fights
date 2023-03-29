@@ -22,7 +22,6 @@
                 <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password">
               </div>
               <div class="d-flex flex-row align-items-center justify-content-between">
-                <a href="#">Login</a>
                 <button class="btn btn-primary">Create Account</button>
               </div>
             </form>
@@ -58,13 +57,7 @@
   h2{
     padding-top: 1.5rem;
   }
-  a{
-    color: #333;
-  }
-  a:hover{
-    color: #da5767;
-    text-decoration: none;
-  }
+  
   .card{
     border: 0.40rem solid #f8f9fa;
     top: 10%;
