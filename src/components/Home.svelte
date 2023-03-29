@@ -2,9 +2,11 @@
 </script>
 
 <div class="home">
+  <div class="buttons">
     <button type="button" class="join">Join a typing race</button>
     <button type="button" class="practice">Practice typing</button>
     <button type="button" class="create">Create your own</button>
+  </div>
 </div>
 
 <style>
@@ -13,7 +15,12 @@
     display: table;
     margin: auto;
   }
-
+  
+  .buttons {
+    display: grid;
+    gap: 2rem;
+    margin: auto;
+  }
   
   button {
     border-radius: 100px;
