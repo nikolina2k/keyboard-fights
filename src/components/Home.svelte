@@ -42,4 +42,15 @@
     transform: scale(1.05);
   }
 
+  .practice {
+    background-color: #f0fbc2;
+    box-shadow: rgba(185, 187, 44, 0.2) 0 -25px 18px -14px inset,rgba(165, 187, 44, 0.15) 0 1px 2px,rgba(177, 187, 44, 0.15) 0 2px 4px,rgba(177, 187, 44, 0.15) 0 4px 8px,rgba(185, 187, 44, 0.15) 0 8px 16px,rgba(173, 187, 44, 0.15) 0 16px 32px;
+    color: rgb(128, 126, 0);
+  }
+
+  .practice:hover {
+    box-shadow: rgba(173, 187, 44, 0.35) 0 -25px 18px -14px inset,rgba(177, 187, 44, 0.25) 0 1px 2px,rgba(173, 187, 44, 0.25) 0 2px 4px,rgba(165, 187, 44, 0.25) 0 4px 8px,rgba(161, 187, 44, 0.25) 0 8px 16px,rgba(161, 187, 44, 0.25) 0 16px 32px;
+    transform: scale(1.05);
+  }
+
 </style>
