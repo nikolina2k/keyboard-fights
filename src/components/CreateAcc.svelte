@@ -10,7 +10,7 @@
   <input type="text" name="name" id="name" placeholder="Name" required/>
   <input type="password" name="name" id="name" placeholder="Password" required/>
   <input type="password" name="name" id="name" placeholder="Confirm password" required/>
-  <button href="{base}" type="button" class="button">Create</button>
+  <button type="button" class="button">Create</button>
   </form>
 </div>
 
@@ -27,7 +27,7 @@ h1 {
   font-weight: 300;
   color: white;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card {
