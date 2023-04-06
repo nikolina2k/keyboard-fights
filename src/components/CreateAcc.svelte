@@ -27,20 +27,21 @@ h1 {
   font-weight: 300;
   color: white;
   text-align: center;
-  padding-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .card {
   margin: 20px auto;
   width: 343px; 
   height: 464px;
-  border-radius: 8px/7px; 
-  background-color: #ebebeb;
-  box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  border-radius: 10px;
+  box-shadow: #f05e5e 0 10px 20px -10px;
   border: none;
   background-color: rgba(0, 0, 0, .4);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 form{
@@ -50,7 +51,7 @@ form{
 input[type=text],input[type=password]{
   width: 200px; 
   height: 39px;
-  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  border-radius: 10px; 
   background-color: #fff;
   box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
   border: solid 1px #cbc9c9;
@@ -68,7 +69,7 @@ a.button {
   display: inline-block;
   text-decoration: none;
   width: 50px; height: 27px;
-  border-radius: 5px; 
+  border-radius: 10px; 
   background-color: black;
   box-shadow: 0 3px grey;
   transition: all 0.1s linear 0s; 
