@@ -10,7 +10,7 @@
   <input type="text" name="name" id="name" placeholder="Name" required/>
   <input type="password" name="name" id="name" placeholder="Password" required/>
   <input type="password" name="name" id="name" placeholder="Confirm password" required/>
-  <a href="{base}" class="button">Create</a>
+  <button href="{base}" type="button" class="button">Create</button>
   </form>
 </div>
 
@@ -46,6 +46,7 @@ h1 {
 
 form{
   margin: 0 30px;
+  
 }
 
 input[type=text],input[type=password]{
@@ -60,30 +61,32 @@ input[type=text],input[type=password]{
   padding-left: 10px;
 }
 
-a.button {
+button {
   font-size: 14px;
   font-weight: 600;
-  color: white;
-  padding: 6px 25px 0px 20px;
-  margin: 10px 8px 20px 0px;
+  padding: 7px 20px;
+  margin-top: 30px;
+  margin-left: auto;
   display: inline-block;
   text-decoration: none;
-  width: 50px; height: 27px;
-  border-radius: 10px; 
-  background-color: black;
-  box-shadow: 0 3px grey;
-  transition: all 0.1s linear 0s; 
-  top: 0px;
-  position: relative;
+  width: 50%;
+  border-radius: 100px;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-color: #c2fbd7;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
 }
 
-a.button:hover {
+button:hover {
   top: 3px;
-  background-color: green;
-  -webkit-box-shadow: none; 
-  -moz-box-shadow: none; 
-  box-shadow: none;
-  
+  cursor: pointer;
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05);
 }
 
 </style>
