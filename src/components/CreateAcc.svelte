@@ -68,6 +68,32 @@ input[type=text],input[type=password]{
   padding-left: 10px;
 }
 
+a.button {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  padding: 6px 25px 0px 20px;
+  margin: 10px 8px 20px 0px;
+  display: inline-block;
+  text-decoration: none;
+  width: 50px; height: 27px;
+  border-radius: 5px; 
+  background-color: black;
+  box-shadow: 0 3px grey;
+  transition: all 0.1s linear 0s; 
+  top: 0px;
+  position: relative;
+}
+
+a.button:hover {
+  top: 3px;
+  background-color: grey;
+  -webkit-box-shadow: none; 
+  -moz-box-shadow: none; 
+  box-shadow: none;
+  
+}
+
 
 
 </style>
