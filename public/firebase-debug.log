@@ -1,0 +1,36 @@
+[debug] [2023-04-15T22:26:44.990Z] ----------------------------------------------------------------------
+[debug] [2023-04-15T22:26:44.992Z] Command:       /home/menna242/.nvm/versions/node/v16.19.1/bin/node /home/menna242/.nvm/versions/node/v16.19.1/bin/firebase serve
+[debug] [2023-04-15T22:26:44.992Z] CLI Version:   11.27.0
+[debug] [2023-04-15T22:26:44.992Z] Platform:      linux
+[debug] [2023-04-15T22:26:44.992Z] Node Version:  v16.19.1
+[debug] [2023-04-15T22:26:44.992Z] Time:          Sun Apr 16 2023 01:26:44 GMT+0300 (Moscow Standard Time)
+[debug] [2023-04-15T22:26:44.993Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-15T22:26:45.102Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-15T22:26:45.103Z] > authorizing via signed-in user (mennashaheen2357@gmail.com)
+[debug] [2023-04-15T22:26:45.103Z] [iam] checking project keyboard-fights-6af18 for permissions ["firebase.projects.get"]
+[debug] [2023-04-15T22:26:45.104Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/keyboard-fights-6af18:testIamPermissions [none]
+[debug] [2023-04-15T22:26:45.104Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/keyboard-fights-6af18:testIamPermissions x-goog-quota-user=projects/keyboard-fights-6af18
+[debug] [2023-04-15T22:26:45.104Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/keyboard-fights-6af18:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-04-15T22:26:46.010Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/keyboard-fights-6af18:testIamPermissions 200
+[debug] [2023-04-15T22:26:46.011Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/keyboard-fights-6af18:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-04-15T22:26:46.015Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18 [none]
+[debug] [2023-04-15T22:26:46.519Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18 200
+[debug] [2023-04-15T22:26:46.519Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18 {"projectId":"keyboard-fights-6af18","projectNumber":"604846413935","displayName":"Keyboard fights","name":"projects/keyboard-fights-6af18","resources":{"hostingSite":"keyboard-fights-6af18"},"state":"ACTIVE","etag":"1_11b82007-8fdb-4764-869d-d03e26556a18"}
+[info] 
+[info] === Serving from '/home/menna242/GithubProjects/Keyboard-Fights'...
+[info] 
+[debug] [2023-04-15T22:26:46.522Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/keyboard-fights-6af18/sites 
+[debug] [2023-04-15T22:26:47.741Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/keyboard-fights-6af18/sites 200
+[debug] [2023-04-15T22:26:47.742Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/keyboard-fights-6af18/sites {"sites":[{"name":"projects/keyboard-fights-6af18/sites/keyboard-fights-6af18","defaultUrl":"https://keyboard-fights-6af18.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-04-15T22:26:47.743Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18/webApps/-/config [none]
+[debug] [2023-04-15T22:26:48.462Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18/webApps/-/config 200
+[debug] [2023-04-15T22:26:48.462Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18/webApps/-/config {"projectId":"keyboard-fights-6af18","storageBucket":"keyboard-fights-6af18.appspot.com","apiKey":"AIzaSyAcZWk1ywBmje6Ld3n1whu5uAwYIKHuIj0","authDomain":"keyboard-fights-6af18.firebaseapp.com","messagingSenderId":"604846413935"}
+[debug] [2023-04-15T22:26:48.485Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18 [none]
+[debug] [2023-04-15T22:26:48.868Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18 200
+[debug] [2023-04-15T22:26:48.869Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/keyboard-fights-6af18 {"projectId":"keyboard-fights-6af18","projectNumber":"604846413935","displayName":"Keyboard fights","name":"projects/keyboard-fights-6af18","resources":{"hostingSite":"keyboard-fights-6af18"},"state":"ACTIVE","etag":"1_11b82007-8fdb-4764-869d-d03e26556a18"}
+[info] i  hosting[keyboard-fights-6af18]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[keyboard-fights-6af18]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [15/Apr/2023:22:26:52 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [15/Apr/2023:22:26:52 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [15/Apr/2023:22:26:52 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [15/Apr/2023:22:26:52 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [15/Apr/2023:22:26:52 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [15/Apr/2023:22:26:52 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36\""}}

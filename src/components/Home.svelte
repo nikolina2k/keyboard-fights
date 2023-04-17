@@ -1,9 +1,15 @@
 <script lang="ts">
+    //import { Link } from '../../.svelte-kit/link'
+    import SelectRace from "./SelectRace.svelte";
+    import { goto } from '$app/navigation';
+    function joinRaceClick(){
+      goto('./select-race');
+    }
 </script>
 
 <div class="home">
   <div class="buttons">
-    <button type="button" class="join">Join a typing race</button>
+    <button on:click={joinRaceClick} type="button" class="join">Join a typing race</button>
     <button type="button" class="create">Create a typing race</button>
     <button type="button" class="practice">Practice typing</button>
   </div>
