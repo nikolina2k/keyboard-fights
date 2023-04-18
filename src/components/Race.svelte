@@ -18,7 +18,7 @@
   
   <main>
     <div class="Race">
-      <h1>Typing Game</h1>
+      <h1>Correctly type as much as you can!</h1>
       {#if game.timeLeft > 0}
         <div class="word">{game.currentWord}</div>
         <textarea bind:value={game.currentInput} disabled={!game.isRunning} />

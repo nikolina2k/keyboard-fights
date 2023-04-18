@@ -6,10 +6,10 @@
   <h1>Create an account</h1>
 
   <form action="/">
-  <input type="text" name="name" id="name" placeholder="Email" required/>
-  <input type="text" name="name" id="name" placeholder="Name" required/>
-  <input type="password" name="name" id="name" placeholder="Password" required/>
-  <input type="password" name="name" id="name" placeholder="Confirm password" required/>
+  <input type="text"  id="newEmail" placeholder="Email" required/>
+  <input type="text" id="name" placeholder="uaername" required/>
+  <input type="password" id="password" placeholder="Password" required/>
+  <input type="password" id="confirmPassword" placeholder="Confirm password" required/>
   <button type="button" class="button">Create</button>
   </form>
 </div>

@@ -5,9 +5,8 @@
   <h1>Sign in</h1>
 
   <form action="/">
-  <input type="text" name="name" id="name" placeholder="Email" required/>
-  <input type="text" name="name" id="name" placeholder="Name" required/>
-  <input type="password" name="name" id="name" placeholder="Password" required/>
+  <input type="text" id="name" placeholder="username" required/>
+  <input type="password" id="password" placeholder="Password" required/>
   <button type="button" class="button">Sign in</button>
   </form>
 </div>
