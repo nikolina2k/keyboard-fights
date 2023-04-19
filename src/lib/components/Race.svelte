@@ -1,7 +1,7 @@
 <!-- App.svelte -->
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
-    import { typingGame } from "../lib/Race";
+    import { typingGame } from "../Race";
     
     let game = typingGame(30);
     let timer: NodeJS.Timeout;

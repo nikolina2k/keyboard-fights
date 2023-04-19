@@ -1,5 +1,5 @@
 <script lang = "ts">
-    import Race from "../../components/Race.svelte"
+    import Race from "../../lib/components/Race.svelte"
 </script>
 
 <Race />

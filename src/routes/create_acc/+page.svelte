@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CreateAcc from '../../components/CreateAcc.svelte';
+	import CreateAcc from '../../lib/components/CreateAcc.svelte';
 </script>
 
 <CreateAcc />

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import About from '../components/About.svelte';
-import Home from '../components/Home.svelte';
-import Navbar from '../components/Navbar.svelte';
+    import About from '../lib/components/About.svelte';
+import Home from '../lib/components/Home.svelte';
+import Navbar from '../lib/components/Navbar.svelte';
 </script>
 
 <Home />
