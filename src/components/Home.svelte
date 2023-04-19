@@ -25,9 +25,9 @@
   .buttons {
     margin: auto;
     gap: 2rem;
-    width: 343px; 
+    width: 303px; 
     height: 464px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: #f05e5e 0 10px 20px -10px;
     border: none;
     background-color: rgba(0, 0, 0, .4);
@@ -54,9 +54,9 @@
   }
 
   .join {
-    background-color: #c2fbd7;
+    background-color: #db0972;
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-    color: green;
+    color: white;
   }
 
   .join:hover {
@@ -65,9 +65,9 @@
   }
 
   .practice {
-    background-color: #f0fbc2;
+    background-color: #dd3489;
     box-shadow: rgba(185, 187, 44, 0.2) 0 -25px 18px -14px inset,rgba(165, 187, 44, 0.15) 0 1px 2px,rgba(177, 187, 44, 0.15) 0 2px 4px,rgba(177, 187, 44, 0.15) 0 4px 8px,rgba(185, 187, 44, 0.15) 0 8px 16px,rgba(173, 187, 44, 0.15) 0 16px 32px;
-    color: rgb(128, 126, 0);
+    color: white;
   }
 
   .practice:hover {
@@ -76,9 +76,9 @@
   }
 
   .create {
-    background-color: #c2eefb;
+    background-color: #da2b82;
     box-shadow: rgba(44, 177, 187, 0.2) 0 -25px 18px -14px inset,rgba(44, 170, 187, 0.15) 0 1px 2px,rgba(44, 170, 187, 0.15) 0 2px 4px,rgba(44, 165, 187, 0.15) 0 4px 8px,rgba(44, 182, 187, 0.15) 0 8px 16px,rgba(44, 177, 187, 0.15) 0 16px 32px;
-    color: rgb(0, 124, 128);
+    color: white;
   }
 
   .create:hover {
