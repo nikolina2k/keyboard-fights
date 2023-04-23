@@ -8,7 +8,8 @@
           <li><a href="{base}/">Home</a></li>
           <li><a href="{base}/about/">About</a></li>
           <li><a href="{base}/create_acc/">Create Account</a></li>
-          <li><a href="{base}/sign_in/">Sign In</a></li>
+          <li><a href="{base}/sign_in/">Sign In</a></li> <!-- not logged in -->
+          <li><a href="{base}/approve">Approve Races</a></li> <!-- is admin -->
         </ul>
     </nav>
 </header>
