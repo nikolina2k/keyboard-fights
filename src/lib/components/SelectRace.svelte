@@ -1,14 +1,16 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
+    import {races} from '$lib/types/UserRaces'
     function startRaceClick(){
       goto('../race');
     }
 </script>
 <div class="selectRace">
     <h1>Select race </h1>
-    So far we only support random word races.
-    Later on you'll be allowed to pick your reference.
-    <button on:click={startRaceClick} type="button" class="join">Start </button>
+    Please pick the dictionary of words you'd like to race with:
+    <li>
+      <button on:click={startRaceClick} type="button" class="join">Random words</button>
+    </li>
 </div>
 <style>
   .selectRace{
