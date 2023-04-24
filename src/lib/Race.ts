@@ -1,8 +1,8 @@
 import { writable, get } from 'svelte/store';
 export const wordsStore = writable(["this", "is", "an", "initial", "set", "of", "words", "to", "test", "typeracer", "feature"]);
-
+export let words = get(wordsStore);
 export function typingGame(time: number) {
-  let words = get(wordsStore);
+  words = get(wordsStore);
   let currentWord = words[Math.floor(Math.random() * words.length)];
   let currentInput = "";
   let startTime = Date.now();

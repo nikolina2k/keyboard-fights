@@ -2,6 +2,7 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
     import { typingGame } from "../Race";
+    import {words} from '../Race'
     import { goto } from '$app/navigation';
     let game = typingGame(30);
     let timer: NodeJS.Timeout;
@@ -18,7 +19,6 @@
     onDestroy(() => clearInterval(timer));
 </script>
   
-  <main>
     <div class="Race">
       {#if game.timeLeft > 0}
         <h1>Correctly type as much as you can!</h1>
@@ -33,7 +33,16 @@
         </button>
       {/if}
     </div>
-  </main>
+  <div class="Words">
+    <h3>
+      Words used:
+    </h3>
+    {#each words as word}
+    <li>
+        {word}
+    </li>
+  {/each}
+  </div>
   
   <style>
     .word {
@@ -64,6 +73,13 @@
     text-align: left;
 
     white-space: nowrap;
+  }
+  .Words{
+    position: relative;
+    margin-right: 0px;
+    margin-left: auto;
+    color: white;
+    float: right;
   }
   button {
     cursor: pointer;
