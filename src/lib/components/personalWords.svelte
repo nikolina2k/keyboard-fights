@@ -69,6 +69,7 @@
     justify-content: top;
     text-align: left;
     padding: 2rem;
+    font-family: sans-serif;
 
     white-space: nowrap;
 }
@@ -90,6 +91,7 @@ button {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+
 .accept {
     color: green;
     background-color: #c2fbd7;
