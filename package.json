@@ -35,6 +35,8 @@
 		"express-session": "^1.17.3",
 		"Faker": "^0.7.2",
 		"firebase": "^9.20.0",
+		"firebase-tools": "^11.28.0",
+		"firestore": "^1.1.6",
 		"lodash": "^4.17.21",
 		"lodash-es": "^4.17.21"
 	}
