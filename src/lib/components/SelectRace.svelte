@@ -37,23 +37,23 @@
   button {
     cursor: pointer;
     font-size: 14px;
-  font-weight: 600;
-  padding: 7px 20px;
-  margin-top: 30px;
-  margin-left: auto;
-  display: inline-block;
-  text-decoration: none;
-  width: 50%;
-  border-radius: 100px;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  background-color: white;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: black;
+    font-weight: 600;
+    padding: 7px 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    display: inline-block;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 100px;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-color: white;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: black;
   }
 
   button:hover {
