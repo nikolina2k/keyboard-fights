@@ -73,12 +73,12 @@ async function handleSubmit(this: HTMLFormElement, event: unknown): Promise<void
   <h1>Sign in</h1>
 
   <form method="POST" on:submit|preventDefault="{handleSubmit}">
-    <input type="email" id="email" placeholder="email" required/>
+    <input type="email" id="email" placeholder="Email" required/>
     <input type="password" id="password" placeholder="Password" required/>
     <button type="submit" class="button">Sign in</button>
   </form>
 
-  <button type="button" class="button" on:click={loginWithGoogle}>Sign in with google</button>
+  <button type="button" class="button" on:click={loginWithGoogle}>Sign in with Google</button>
 </div>
 
 <style>

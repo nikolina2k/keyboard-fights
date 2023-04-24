@@ -7,7 +7,7 @@
 
   <form action="/">
   <input type="text"  id="newEmail" placeholder="Email" required/>
-  <input type="text" id="name" placeholder="uaername" required/>
+  <input type="text" id="name" placeholder="Username" required/>
   <input type="password" id="password" placeholder="Password" required/>
   <input type="password" id="confirmPassword" placeholder="Confirm password" required/>
   <button type="button" class="button">Create</button>
