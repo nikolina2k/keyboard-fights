@@ -1,13 +1,13 @@
+import { writable, get } from 'svelte/store';
+export const wordsStore = writable(["this", "is", "an", "initial", "set", "of", "words", "to", "test", "typeracer", "feature"]);
+
 export function typingGame(time: number) {
-  // words will be replaced with the text we're reading from now.
-  const words = ["this", "is", "an", "initial", "set", "of", "words", "to", "test", "typeracer", "feature"];
+  let words = get(wordsStore);
   let currentWord = words[Math.floor(Math.random() * words.length)];
   let currentInput = "";
   let startTime = Date.now();
   let timeLeft = time;
   let intervalId: NodeJS.Timeout | undefined;
-  // TODO: fix the way WPM is calculated to consider total number of keystrokes/average word length/time 
-  // right now it's total number of words written in 30 seconds * 2.
   let wpm = 0;
 
   function tick() {

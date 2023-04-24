@@ -2,7 +2,7 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
     import { typingGame } from "../Race";
-    
+    import { goto } from '$app/navigation';
     let game = typingGame(30);
     let timer: NodeJS.Timeout;
   
@@ -12,20 +12,25 @@
         if (game.timeLeft === 0) clearInterval(timer);
       }, 1000);
     });
-  
+    function handleButtonClick() {
+      goto('../select-race');
+    }
     onDestroy(() => clearInterval(timer));
 </script>
   
   <main>
     <div class="Race">
-      <h1>Correctly type as much as you can!</h1>
       {#if game.timeLeft > 0}
+        <h1>Correctly type as much as you can!</h1>
         <div class="word">{game.currentWord}</div>
         <textarea bind:value={game.currentInput} disabled={!game.isRunning} />
         <p>Time left: {game.timeLeft}</p>
         <p>Words per minute: {game.wpm}</p>
       {:else}
-        <p>Game over! Your score: {game.wpm} WPM</p>
+        <h1>Game over! Your score: {game.wpm} WPM</h1>
+        <button on:click={() => handleButtonClick()}>
+          Race again!
+        </button>
       {/if}
     </div>
   </main>
@@ -60,6 +65,26 @@
 
     white-space: nowrap;
   }
-
+  button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    display: inline-block;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 100px;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-color: white;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: black;
+  }
   </style>
   
