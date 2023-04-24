@@ -1,4 +1,5 @@
-import { memoize } from 'lodash'
+import pkg from 'lodash';
+const { memoize } = pkg;
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 import { getAuth } from 'firebase/auth'
