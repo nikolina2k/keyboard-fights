@@ -76,9 +76,10 @@ async function handleSubmit(this: HTMLFormElement, event: unknown): Promise<void
     <input type="email" id="email" placeholder="Email" required/>
     <input type="password" id="password" placeholder="Password" required/>
     <button type="submit" class="button">Sign in</button>
+    <button type="button" class="button" on:click={loginWithGoogle}>Sign in with Google</button>
   </form>
 
-  <button type="button" class="button" on:click={loginWithGoogle}>Sign in with Google</button>
+  
 </div>
 
 <style>
@@ -100,7 +101,7 @@ h1 {
 .card {
   margin: 20px auto;
   width: 343px; 
-  height: 364px;
+  height: 464px;
   border-radius: 10px;
   box-shadow: #f05e5e 0 10px 20px -10px;
   border: none;
