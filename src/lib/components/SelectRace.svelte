@@ -1,17 +1,41 @@
+<!-- <template>
+  <div>
+    <h2>Posts</h2>
+    <ul>
+      {#each posts as post}
+        <li>
+          <button on:click={() => handleButtonClick(post.id)}>
+            {post.title}
+          </button>
+        </li>
+      {/each}
+    </ul>
+  </div>
+</template> -->
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import {races} from '$lib/types/UserRaces'
+    import type {Races} from '../types/Races'
+    import {getCollection} from '../components/UserRaces';
+    import { onMount } from 'svelte';
+    export let races: Races[] = [];
+    onMount(async () => {
+      races = await getCollection();
+    });
     function startRaceClick(){
       goto('../race');
+    }
+    function handleButtonClick(postId: string) {
+      console.log(`Button clicked for post with id ${postId}`);
     }
 </script>
 
 <div class="selectRace">
     <h1>Select race </h1>
     Please pick the dictionary of words you'd like to race with:
-    <li>
-      <button on:click={startRaceClick} type="button" class="join">Random words</button>
-    </li>
+    <button on:click={startRaceClick} type="button" class="join">Random words</button>
+    {#each races as raceOption}
+    <button>{raceOption.id}</button>
+  {/each}
 </div>
 
 <style>
