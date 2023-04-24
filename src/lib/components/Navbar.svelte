@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { base } from '$app/paths';
+import { base } from '$app/paths'
+import { auth, type User } from '../../stores/auth'
 </script>
 
 <header>

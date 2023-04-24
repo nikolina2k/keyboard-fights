@@ -1,14 +1,84 @@
 <script lang="ts">
+import { getAuth, GoogleAuthProvider, signInWithEmailAndPassword, type UserCredential, signInWithPopup } from "firebase/auth"
+import type { ActionResult } from "@sveltejs/kit"
+import { applyAction, deserialize } from "$app/forms"
+import { invalidateAll } from "$app/navigation"
+
+const login = async (email: string | undefined, password: string | undefined): Promise<ActionResult<{credential: UserCredential}, Record<string, string>>> => {
+  if (!email || !password) {
+    return { type: 'failure', status: 400, data: { message: 'Email or password are missing' }}
+  }
+  const auth = getAuth()
+  try {
+    const credential = await signInWithEmailAndPassword(auth, email, password)
+    return {
+      type: 'success',
+      status: 200,
+      data: { credential },
+    }
+  } catch (error) {
+    return {
+      type: 'failure',
+      status: 403,
+      data: { message: (error as Error).message }
+    }
+  }
+}
+
+async function loginWithGoogle() {
+  try {
+    const provider = new GoogleAuthProvider()
+    const auth = getAuth()
+    await signInWithPopup(auth, provider)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+async function handleSubmit(this: HTMLFormElement, event: unknown): Promise<void> {
+  const formData = new FormData(this)
+  const email = formData.get('email')?.toString()
+  const password = formData.get('password')?.toString()
+  try {
+    const loginResult = await login(email, password)
+    if (loginResult.type !== 'success') {
+      applyAction(loginResult)
+      return
+    }
+    const { data } = loginResult
+    if (!data?.credential) {
+      throw new Error('Login returned success but no user credential data')
+    }
+    const { credential: { user } } = data
+    formData.set('token', await user.getIdToken())
+
+    const response = await fetch(this.action, {
+      method: 'POST',
+      body: formData,
+    })
+    const result = deserialize(await response.text())
+    if (result.type === 'success') {
+      await invalidateAll()
+    }
+  } catch (error) {
+    applyAction({
+      type: 'error',
+      error,
+    })
+  }
+}
 </script>
 
 <div class="card">
   <h1>Sign in</h1>
 
-  <form action="/">
-  <input type="text" id="name" placeholder="username" required/>
-  <input type="password" id="password" placeholder="Password" required/>
-  <button type="button" class="button">Sign in</button>
+  <form method="POST" on:submit|preventDefault="{handleSubmit}">
+    <input type="email" id="email" placeholder="email" required/>
+    <input type="password" id="password" placeholder="Password" required/>
+    <button type="submit" class="button">Sign in</button>
   </form>
+
+  <button type="button" class="button" on:click={loginWithGoogle}>Sign in with google</button>
 </div>
 
 <style>
@@ -46,7 +116,7 @@ form{
   
 }
 
-input[type=text],input[type=password]{
+input{
   width: 200px; 
   height: 39px;
   border-radius: 10px; 
