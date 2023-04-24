@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding: 2rem;
   }
   
   button {

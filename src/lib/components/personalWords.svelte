@@ -68,7 +68,7 @@
     flex-direction: column;
     justify-content: top;
     text-align: left;
-    padding: 1rem;
+    padding: 2rem;
 
     white-space: nowrap;
 }
