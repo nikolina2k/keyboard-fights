@@ -14,7 +14,7 @@
     });
   
     onDestroy(() => clearInterval(timer));
-  </script>
+</script>
   
   <main>
     <div class="Race">
@@ -37,20 +37,29 @@
       margin-bottom: 1rem;
     }
     textarea {
-      width: 100%;
-      height: 5rem;
+      width: auto;
+      height: auto;
       font-size: 1.5rem;
       padding: 1rem;
     }
   .Race{
     color: white;
-          font-family: sans-serif;
-      font-weight: bold;
-          padding: 12px 16px;
-      margin: 0 8px;
-          position: relative;
-      cursor: pointer;
-          white-space: nowrap;
+    font-family: sans-serif;
+    padding: 1rem;
+    margin: 20px auto;
+    width: auto; 
+    height: 464px;
+    border-radius: 10px;
+    box-shadow: #f05e5e 0 10px 20px -10px;
+    border: none;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);display: flex;
+    flex-direction: column;
+    justify-content: top;
+    text-align: left;
+
+    white-space: nowrap;
   }
+
   </style>
   
