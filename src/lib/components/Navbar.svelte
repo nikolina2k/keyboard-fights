@@ -29,6 +29,7 @@ const logout = async () => {
             {#if user}
             <button on:click={() => goto(`${base}/personal-words/`)}>Personal Words</button> <!-- is admin -->
             <button on:click={logout}>Log out</button>
+            <button on:click={() => goto(`${base}/profile`)}>Profile</button>
             {:else}
             <button on:click={() => goto(`${base}/create_acc/`)}>Create Account</button>
             <button on:click={() => goto(`${base}/sign_in/`)}>Sign In</button> <!-- not logged in -->
