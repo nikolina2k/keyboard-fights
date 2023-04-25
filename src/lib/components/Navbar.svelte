@@ -1,7 +1,24 @@
 <script lang="ts">
 import { base } from '$app/paths'
 import { auth, type User } from '../../stores/auth'
-    import { goto } from '$app/navigation';
+import { goto } from '$app/navigation'
+import { onMount } from "svelte"
+import { invalidateAll } from '$app/navigation'
+import { getAuth, signOut } from 'firebase/auth'
+
+let user: User | null = null
+
+onMount(() => {
+    return auth.subscribe((val) => {
+        user = val;
+    })
+})
+
+const logout = async () => {
+    const firebaseAuth = getAuth()
+    await signOut(firebaseAuth)
+    await invalidateAll()
+}
 </script>
 
 <header>
@@ -9,9 +26,13 @@ import { auth, type User } from '../../stores/auth'
         <div class="navbar_links">
             <button on:click={() => goto(`${base}/`)}>Home</button>
             <button on:click={() => goto(`${base}/about/`)}>About</button>
+            {#if user}
+            <button on:click={() => goto(`${base}/personal-words/`)}>Personal Words</button> <!-- is admin -->
+            <button on:click={logout}>Log out</button>
+            {:else}
             <button on:click={() => goto(`${base}/create_acc/`)}>Create Account</button>
             <button on:click={() => goto(`${base}/sign_in/`)}>Sign In</button> <!-- not logged in -->
-            <button on:click={() => goto(`${base}/personal-words/`)}>Personal Words</button> <!-- is admin -->
+            {/if}
         </div>
     </nav>
 </header>
