@@ -8,9 +8,12 @@ name: Deploy to Firebase Hosting on merge
       - main
 jobs:
   build_and_deploy:
+    name: Build and Deploy to GH Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name : Lint
+        run: npm run lint
       - run: npm ci
             npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
