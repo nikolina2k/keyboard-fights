@@ -5,7 +5,7 @@
     import {words} from '../Race'
     import { goto } from '$app/navigation';
     let game = typingGame(30);
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setInterval>;
   
     onMount(() => {
       timer = setInterval(() => {
