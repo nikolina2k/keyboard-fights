@@ -1,4 +1,4 @@
 export interface Races {
-    id: string;
-    words: string [];
+  id: string;
+  words: string[];
 }

@@ -1,1 +1,1 @@
-const prerender = true
+const prerender = true;

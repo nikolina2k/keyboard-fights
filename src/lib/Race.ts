@@ -1,10 +1,22 @@
 import { writable, get } from 'svelte/store';
-export const wordsStore = writable(["this", "is", "an", "initial", "set", "of", "words", "to", "test", "typeracer", "feature"]);
+export const wordsStore = writable([
+  'this',
+  'is',
+  'an',
+  'initial',
+  'set',
+  'of',
+  'words',
+  'to',
+  'test',
+  'typeracer',
+  'feature',
+]);
 export let words = get(wordsStore);
 export function typingGame(time: number) {
   words = get(wordsStore);
   let currentWord = words[Math.floor(Math.random() * words.length)];
-  let currentInput = "";
+  let currentInput = '';
   let startTime = Date.now();
   let timeLeft = time;
   let intervalId: NodeJS.Timeout | undefined;
@@ -31,7 +43,7 @@ export function typingGame(time: number) {
       currentInput = value;
       if (currentInput === currentWord) {
         currentWord = words[Math.floor(Math.random() * words.length)];
-        currentInput = "";
+        currentInput = '';
         wpm += 2;
       }
     },

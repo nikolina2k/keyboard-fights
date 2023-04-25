@@ -1,4 +1,4 @@
 export type UserRace = {
-    title: string
-    words: string[]
+  title: string;
+  words: string[];
 };

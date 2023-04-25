@@ -1,30 +1,30 @@
 {
-    "editor.formatOnSave": true,
-    "files.insertFinalNewline": true,
-    "editor.tabSize": 2,
-    "editor.detectIndentation": false,
-    "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "svelte"
-    ],
-    "editor.insertSpaces": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    "eslint.format.enable": true,
-    "eslint.options": {
-      "extensions": [".js", ".jsx", ".ts", ".tsx", ".svelte"]
-    },
-    "prettier.tabWidth": 2,
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": "all",
-    "prettier.jsxSingleQuote": true,
-    "prettier.printWidth": 80,
-    "svelte.plugin": {
-      "preprocess": true
-    }
-  }  
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "svelte"
+  ],
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".svelte"]
+  },
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 80,
+  "svelte.plugin": {
+    "preprocess": true
+  }
+}

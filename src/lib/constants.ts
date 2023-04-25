@@ -1,1 +1,1 @@
-export const SESSION_COOKIE_NAME = 'userSession'
+export const SESSION_COOKIE_NAME = 'userSession';
