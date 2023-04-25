@@ -33,9 +33,9 @@ async function getUsername() {
   return username;
 }
 export async function getCollection() {
-  var ret = initFirebase();
+  const ret = initFirebase();
   const db = getFirestore(ret.app);
-  let username = await getUsername();
+  const username = await getUsername();
   console.log(username);
   const userDocRef = doc(db, 'references', username);
   const racesRef = collection(userDocRef, 'races');
@@ -50,7 +50,7 @@ export async function getCollection() {
 }
 
 export async function createUserRace(userUid: string, race: UserRace) {
-  var ret = initFirebase();
+  const ret = initFirebase();
   const db = getFirestore(ret.app);
 
   await setDoc(doc(db, 'references', userUid, 'races', race.title), {
@@ -60,14 +60,14 @@ export async function createUserRace(userUid: string, race: UserRace) {
 }
 
 export async function getUserRace(userUid: string, title: string) {
-  var ret = initFirebase();
+  const ret = initFirebase();
   const db = getFirestore(ret.app);
 
   return await getDoc(doc(db, 'references', userUid, 'races', title));
 }
 
 export async function deleteUserRace(userUid: string, title: string) {
-  var ret = initFirebase();
+  const ret = initFirebase();
   const db = getFirestore(ret.app);
 
   return await deleteDoc(doc(db, 'references', userUid, 'races', title));
@@ -77,16 +77,16 @@ export async function getUserRaces(
   userUid: string,
   pageSize: number,
   lastRace: string | undefined,
-  asc: boolean = true
+  asc = true
 ) {
-  var ret = initFirebase();
+  const ret = initFirebase();
   const db = getFirestore(ret.app);
 
-  let racesCollection = collection(db, 'references', userUid, 'races');
+  const racesCollection = collection(db, 'references', userUid, 'races');
   let q;
   console.log(asc);
   if (lastRace != undefined) {
-    let race = await getDoc(doc(racesCollection, lastRace));
+    const race = await getDoc(doc(racesCollection, lastRace));
     q = query(
       racesCollection,
       orderBy('createdAt', asc ? 'asc' : 'desc'),
@@ -101,9 +101,9 @@ export async function getUserRaces(
     );
   }
 
-  let racesSnapshot = await getDocs(q);
-  let count = await getCountFromServer(racesCollection);
-  let races = racesSnapshot.docs.map((doc) => ({
+  const racesSnapshot = await getDocs(q);
+  const count = await getCountFromServer(racesCollection);
+  const races = racesSnapshot.docs.map((doc) => ({
     title: doc.id,
     ...doc.data(),
   })) as UserRace[];

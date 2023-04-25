@@ -1,29 +1,42 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
-    import {wordsStore} from '../Race';
-    import type {Races} from '../types/Races'    
-    import { waitForPendingWrites } from 'firebase/firestore';
-    import {get} from 'svelte/store'
-    import {races} from '../components/UserRaces'
-    let raceOptions : Races[] = get(races);
-    function startRaceClick(){
-      wordsStore.set(["this", "is", "an", "initial", "set", "of", "words", "to", "test", "typeracer", "feature"]);
-      goto('../race');
-    }
-    function handleButtonClick(race : Races) {
-      
-      wordsStore.set(race.words);
-      goto('../race');
-    }
+  import { goto } from '$app/navigation';
+  import { wordsStore } from '../Race';
+  import type { Races } from '../types/Races';
+  import { waitForPendingWrites } from 'firebase/firestore';
+  import { get } from 'svelte/store';
+  import { races } from '../components/UserRaces';
+  let raceOptions: Races[] = get(races);
+  function startRaceClick() {
+    wordsStore.set([
+      'this',
+      'is',
+      'an',
+      'initial',
+      'set',
+      'of',
+      'words',
+      'to',
+      'test',
+      'typeracer',
+      'feature',
+    ]);
+    goto('../race');
+  }
+  function handleButtonClick(race: Races) {
+    wordsStore.set(race.words);
+    goto('../race');
+  }
 </script>
 
 <div class="selectRace">
-    <h1>Select race </h1>
-    Please pick the dictionary of words you'd like to race with:
-    <li>
-      <button on:click={startRaceClick} type="button" class="join">Random words</button>
-    </li>
-    {#each raceOptions as raceOption}
+  <h1>Select race</h1>
+  Please pick the dictionary of words you'd like to race with:
+  <li>
+    <button on:click={startRaceClick} type="button" class="join"
+      >Random words</button
+    >
+  </li>
+  {#each raceOptions as raceOption}
     <li>
       <button on:click={() => handleButtonClick(raceOption)}>
         {raceOption.id}
@@ -33,22 +46,23 @@
 </div>
 
 <style>
-  .selectRace{
+  .selectRace {
     color: white;
     font-family: sans-serif;
     padding: 2rem;
     margin: 20px auto;
-    width: auto; 
+    width: auto;
     height: 464px;
     border-radius: 10px;
     box-shadow: #f05e5e 0 10px 20px -10px;
     border: none;
-    background-color: rgba(0, 0, 0, .4);
-    backdrop-filter: blur(10px);display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
     flex-direction: column;
     justify-content: top;
     text-align: left;
-    
+
     white-space: nowrap;
   }
 
@@ -70,15 +84,20 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     background-color: white;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+      rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+      rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+      rgba(44, 187, 99, 0.15) 0 16px 32px;
     color: black;
   }
 
   button:hover {
-  top: 3px;
-  cursor: pointer;
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.05);
+    top: 3px;
+    cursor: pointer;
+    box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+      rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+      rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+      rgba(44, 187, 99, 0.25) 0 16px 32px;
+    transform: scale(1.05);
   }
-
 </style>

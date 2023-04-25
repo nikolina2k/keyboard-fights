@@ -3,7 +3,7 @@ export const splitWords = (text: string) => {
 };
 
 export const validateDictionary = (words: string[]) => {
-  let exceptions: string[] = [];
+  const exceptions: string[] = [];
 
   words.forEach((word) => {
     if (!word.match(/^[A-Za-z0-9]+$/g)) {

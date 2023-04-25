@@ -1,25 +1,25 @@
-<script lang='ts'>
-    import { paginate, PaginationNav } from 'svelte-paginate'
+<script lang="ts">
+  import { paginate, PaginationNav } from 'svelte-paginate';
 
-    export let items: string[] = [];
-    export let pageSize = 10;
-    let currentPage = 1;
-    $: paginatedItems = paginate<string>({ items, pageSize, currentPage });
+  export let items: string[] = [];
+  export let pageSize = 10;
+  let currentPage = 1;
+  $: paginatedItems = paginate<string>({ items, pageSize, currentPage });
 </script>
 
 <ul class="items">
-{#each paginatedItems as item}
+  {#each paginatedItems as item}
     <li class="item">
-        {item}
+      {item}
     </li>
-{/each}
+  {/each}
 </ul>
 
 <PaginationNav
-  totalItems="{items.length}"
-  pageSize="{pageSize}"
-  currentPage="{currentPage}"
-  limit="{1}"
-  showStepOptions="{true}"
-  on:setPage="{(e) => currentPage = e.detail.page}"
+  totalItems={items.length}
+  {pageSize}
+  {currentPage}
+  limit={1}
+  showStepOptions={true}
+  on:setPage={(e) => (currentPage = e.detail.page)}
 />

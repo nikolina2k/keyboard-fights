@@ -17,7 +17,7 @@ export function typingGame(time: number) {
   words = get(wordsStore);
   let currentWord = words[Math.floor(Math.random() * words.length)];
   let currentInput = '';
-  let startTime = Date.now();
+  const startTime = Date.now();
   let timeLeft = time;
   let intervalId: NodeJS.Timeout | undefined;
   let wpm = 0;
