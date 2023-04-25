@@ -32,17 +32,18 @@
           Race again!
         </button>
       {/if}
+
+        <h3>
+          Words used:
+        </h3>
+        {#each words as word}
+        <li>
+            {word}
+        </li>
+      {/each}
+      
     </div>
-  <div class="Words">
-    <h3>
-      Words used:
-    </h3>
-    {#each words as word}
-    <li>
-        {word}
-    </li>
-  {/each}
-  </div>
+  
   
   <style>
     .word {
@@ -62,7 +63,7 @@
     padding: 1rem;
     margin: 20px auto;
     width: auto; 
-    height: 464px;
+    height: auto;
     border-radius: 10px;
     box-shadow: #f05e5e 0 10px 20px -10px;
     border: none;
@@ -75,11 +76,8 @@
     white-space: nowrap;
   }
   .Words{
-    position: relative;
-    margin-right: 0px;
-    margin-left: auto;
+    margin: auto;
     color: white;
-    float: right;
   }
   button {
     cursor: pointer;
