@@ -5,16 +5,31 @@ import { serverTimestamp, getDoc, setDoc, deleteDoc, query, startAfter, orderBy,
 import type { UserRace } from "../types/UserRace";
 import type {Races} from '../types/Races'
 import { writable, get } from 'svelte/store';
+import 'firebase/auth';
+import 'firebase/firestore';
 import Race from './Race.svelte';
-
 export const races = writable<Races[]>([]);
-
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+async function getUsername(){
+    const auth = getAuth();
+    let username = "path242";
+    onAuthStateChanged(auth, (user) => {
+        console.log(user);
+        if (user) {
+            const uid = user.uid;
+            username = uid;
+        } 
+    });
+    await new Promise(f => setTimeout(f, 500));
+    return username;
+}
 export async function getCollection(){
     var ret = initFirebase();
     const db = getFirestore(ret.app);
-    const userDocRef = doc(db, 'references', 'path242');
+    let username = await getUsername();
+    console.log(username);
+    const userDocRef = doc(db, 'references', username);
     const racesRef = collection(userDocRef, 'races');
-    
     const racesSnapshot = await getDocs(racesRef);
     const retRaces = racesSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     console.log(retRaces);

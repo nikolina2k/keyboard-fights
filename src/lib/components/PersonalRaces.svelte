@@ -19,7 +19,6 @@
             await goto('/');
             return {count: 0, items: []};
         }
-        
         return await getUserRaces($auth.uid, pageSize, lastItem, asc)
     }
 
