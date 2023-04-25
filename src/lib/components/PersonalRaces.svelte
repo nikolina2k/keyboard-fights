@@ -14,7 +14,7 @@
     let currentPage = 1;
     let pageSize = 4;
     
-    const fetchPagination = async (pageSize: number, lastItem: undefined | string, asc: boolean = true): Promise<Pagination<UserRace>> => {
+    const fetchPagination = async (pageSize: number, lastItem: undefined | string, asc = true): Promise<Pagination<UserRace>> => {
         if (!$auth || !$auth.uid) {
             await goto('/');
             return {count: 0, items: []};

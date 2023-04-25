@@ -4,6 +4,7 @@
     import { typingGame } from "../Race";
     import {words} from '../Race'
     import { goto } from '$app/navigation';
+    import {getCollection} from '../components/UserRaces'
     let game = typingGame(30);
     let timer: ReturnType<typeof setInterval>;
   
@@ -14,7 +15,8 @@
       }, 1000);
     });
     function handleButtonClick() {
-      goto('../select-race');
+      getCollection().then( () =>{ 
+      goto('../select-race'); } );
     }
     onDestroy(() => clearInterval(timer));
 </script>

@@ -9,8 +9,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint . --ext .svelte",
-    	"format": "prettier --write .",
-    	"prettier": "npm run format"
+		"format": "prettier --write .",
+		"prettier": "npm run format"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -47,6 +47,7 @@
 		"firebase": "^9.20.0",
 		"firebase-tools": "^11.28.0",
 		"firestore": "^1.1.6",
+		"lint": "^0.8.19",
 		"lodash": "^4.17.21",
 		"lodash-es": "^4.17.21",
 		"types": "^0.1.1"

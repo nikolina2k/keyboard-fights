@@ -11,6 +11,7 @@
       goto('../race');
     }
     function handleButtonClick(race : Races) {
+      
       wordsStore.set(race.words);
       goto('../race');
     }

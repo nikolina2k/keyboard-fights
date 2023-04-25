@@ -33,5 +33,12 @@
 {#if $raceInfo == null} 
 Loading...
 {:else}
+<h2>{$page.params.title}</h2>
 <UserRace raceInfo={$raceInfo}/>
 {/if}
+<style>
+    h2{
+        color:white;
+        align-self: center;
+    }
+</style>
