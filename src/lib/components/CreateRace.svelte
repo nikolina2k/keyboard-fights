@@ -1,20 +1,31 @@
 <script lang='ts'>
     import {splitWords, validateDictionary, makeDictionary, formatWords} from '$lib/Dictionary'
-    import { writable } from 'svelte/store';
+    import { createUserRace } from '$lib/components/UserRaces';
+    import { get, writable } from 'svelte/store';
+    import { auth } from '../../stores/auth';
 
-    let value = '';
+    export let value = '';
+    export let title = '';
     let errors = writable([] as string[]);
 
-    const submitDictionary = () => {
+    async function submitDictionary(this: HTMLFormElement, event: unknown) {
         let words = splitWords(value);
-        let validateExceptions = validateDictionary(words);
+        let validateExceptions = validateDictionary(words.concat([title]));
         if (validateExceptions.length) {
             $errors = validateExceptions;
             return;
         }
 
-        let dict = makeDictionary(words);
-        // TODO insert race into database
+        words = makeDictionary(words);
+        let user = get(auth);
+
+        if (user === null) {
+            $errors = ['User must be signed in']
+            return
+        }
+        $errors = []
+        await createUserRace(user.uid, {title, words});
+        
     };
 
     const formatText = () => {
@@ -26,8 +37,9 @@
 </script>
 
 <div class="container">
-    <textarea bind:value class='dict-input'></textarea>
-
+    <input bind:value={title} placeholder='title'>
+    <textarea bind:value class='dict-input' placeholder='Your words'></textarea>
+    
     {#if $errors.length}
         <ul>
         {#each $errors as error}
