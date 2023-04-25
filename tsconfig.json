@@ -10,7 +10,8 @@
 		"sourceMap": true,
 		"strict": true,
 		"types": ["node"],
-		"noImplicitAny": true
+		"noImplicitAny": true,
+		"target": "ESNext"
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

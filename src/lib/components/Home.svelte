@@ -1,9 +1,11 @@
 <script lang="ts">
     //import { Link } from '../../.svelte-kit/link'
     // import SelectRace from "./SelectRace.svelte";
+    import {getCollection} from '../components/UserRaces'
     import { goto } from '$app/navigation';
     function joinRaceClick(){
-      goto('./select-race');
+      getCollection().then( () => {
+      goto('./select-race'); })
     }
     function createRaceClick(){
       goto('./create-race');

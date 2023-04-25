@@ -15,6 +15,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-node": "^1.2.3",
+		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.5.0",
 		"@types/bcrypt": "^5.0.0",
 		"@types/body-parser": "^1.19.2",
@@ -47,6 +48,7 @@
 		"firebase-tools": "^11.28.0",
 		"firestore": "^1.1.6",
 		"lodash": "^4.17.21",
-		"lodash-es": "^4.17.21"
+		"lodash-es": "^4.17.21",
+		"types": "^0.1.1"
 	}
 }

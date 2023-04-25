@@ -2,7 +2,10 @@
 import { initFirebase } from "$lib/client/firebase";
 import { getFirestore, doc, collection, getDocs }  from "firebase/firestore"
 import type {Races} from '../types/Races'
-export async function getCollection(): Promise<Races[]> {
+import { writable, get } from 'svelte/store';
+import Race from './Race.svelte';
+export const races = writable<Races[]>([]);
+export async function getCollection(){
     var ret = initFirebase();
     const db = getFirestore(ret.app);
     const userDocRef = doc(db, 'references', 'path242');
@@ -12,5 +15,5 @@ export async function getCollection(): Promise<Races[]> {
     const retRaces = racesSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     console.log(retRaces);
   // extract the data from the snapshot and return it
-  return retRaces as Races[];
+  races.set(retRaces as Races []);
 }

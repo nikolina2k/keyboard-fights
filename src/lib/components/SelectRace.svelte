@@ -1,14 +1,11 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
-    import type {Races} from '../types/Races'
-    import {getCollection} from '../components/UserRaces';
-    import { onMount } from 'svelte';
-    import {wordsStore} from '../Race';    
-  import { waitForPendingWrites } from 'firebase/firestore';
-    export let races: Races[] = [];
-    onMount(async () => {
-      races = await getCollection();
-    });
+    import {wordsStore} from '../Race';
+    import type {Races} from '../types/Races'    
+    import { waitForPendingWrites } from 'firebase/firestore';
+    import {get} from 'svelte/store'
+    import {races} from '../components/UserRaces'
+    let raceOptions : Races[] = get(races);
     function startRaceClick(){
       wordsStore.set(["this", "is", "an", "initial", "set", "of", "words", "to", "test", "typeracer", "feature"]);
       goto('../race');
@@ -25,7 +22,7 @@
     <li>
       <button on:click={startRaceClick} type="button" class="join">Random words</button>
     </li>
-    {#each races as raceOption}
+    {#each raceOptions as raceOption}
     <li>
       <button on:click={() => handleButtonClick(raceOption)}>
         {raceOption.id}
