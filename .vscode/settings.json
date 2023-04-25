@@ -10,6 +10,11 @@
       "typescriptreact",
       "svelte"
     ],
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
     "eslint.format.enable": true,
     "eslint.options": {
       "extensions": [".js", ".jsx", ".ts", ".tsx", ".svelte"]
