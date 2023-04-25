@@ -31,8 +31,12 @@
     
 </script>
 {#if $raceInfo == null} 
+<title>loading</title>
 Loading...
 {:else}
+<title>{$page.params.title}</title>
+<meta property="og:title" content={$page.params.title}>
+<meta property="og:description" content="personal race reference for user {$auth?.email}">
 <h2>{$page.params.title}</h2>
 <UserRace raceInfo={$raceInfo}/>
 {/if}
